@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            # Mathématiques : Suites numériques - Exercices
+Niveau : Tale Bac Pro
+
+---
+
+### Exercice 1 - Reconnaître une suite géométrique
+
+On donne les suites suivantes.  
+Pour chacune d’elles, indiquer si c’est une **suite géométrique**.  
+Si oui, préciser sa **raison** $q$.
+
+2 ; 4 ; 8 ; 16 ; 32  
+3 ; 6 ; 12 ; 24 ; 48  
+5 ; 10 ; 15 ; 20 ; 25  
+81 ; 27 ; 9 ; 3 ; 1  
+1 ; 0,5 ; 0,25 ; 0,125 ; 0,0625  
+
+---
+
+### Exercice 2 - Calcul d’un terme – Formule générale
+
+On rappelle la formule d’une suite géométrique :  $u_n = u_1 \times q^{n-1}$.
+
+
+On considère une suite $(u_n)$ géométrique de premier terme $u_1 = 5$ et de raison $q = 3$.  
+1. Calculer $u_2$, $u_3$ et $u_4$.  
+1. Calculer $u_{10}$.  
+
+---
+
+### Exercice 3 - Suite décroissante
+
+On considère la suite géométrique $(v_n)$ de premier terme $v_1 = 100$ et de raison $q = 0{,}8$.  
+
+1. Écrire les cinq premiers termes de la suite.  
+1. La suite est-elle croissante ou décroissante ? Justifier.  
+1. Calculer $v_{8}$.
+
+---
+
+### Exercice 4 - Suite géométrique à raison négative
+
+On considère une suite $(w_n)$ telle que $w_1 = 3$ et $q = -2$.  
+
+1. Donner les quatre premiers termes de la suite.  
+1. Que pouvez-vous dire du **signe** des termes successifs ?  
+1. Calculer $w_5$.
+
+---
+
+### Exercice 5 - Rechercher la raison d’une suite géométrique
+
+On donne une suite $(x_n)$ telle que $x_1 = 4$ et $x_4 = 108$.  
+On sait qu’elle est géométrique.
+
+1. Calculer la raison $q$.  
+1. Écrire la formule du terme général $x_n$.  
+1. Calculer $x_6$.
+
+---
+
+### Exercice 6 - Utiliser la formule du terme général
+
+Une suite $(y_n)$ est définie par $y_1 = 10$ et $q = 1{,}2$.  
+
+1. Donner la formule du terme général $y_n$.  
+1. Calculer $y_3$ et $y_5$.  
+1. Interprèter la suite : augmente-t-elle ou diminue-t-elle ?  
+
+### Exercice 7 -  Somme des $n$ premiers termes
+
+La somme des $n$ premiers termes d’une suite géométrique $(u_n)$ de premier terme $u_1$ et de raison $q$ est donnée par :  
+$$
+S_n = u_1 \times \frac{1 - q^n}{1 - q}
+$$
+
+1. Calculer la somme $S_6$ des six premiers termes de la suite définie par $u_1 = 5$ et $q = 2$.  
+1. Calculer la somme $S_5$ des cinq premiers termes de la suite définie par $u_1 = 10$ et $q = 0{,}5$.
+
+### Exercice 8 - Identifier graphiquement une suite géométrique
+
+On considère la suite $(z_n)$ définie par $z_1 = 2$ et $q = 1{,}5$.  
+
+1. Calculer les cinq premiers termes.  
+1. Tracer sur un repère les points $(n, z_n)$ pour $n = 1$ à $5$.  
+1. Décrire la forme de la représentation graphique (alignée ou courbe ? croissante ou décroissante ?).
+
+### Exercice 9 - Problème de synthèse
+
+Une bactérie double de taille toutes les heures.  
+Sa taille initiale est de $2$ micromètres.
+
+On note $(t_n)$ la taille (en micromètres) au bout de $n$ heures.  
+1. Détermine $t_1$, $t_2$, $t_3$, puis la formule de $t_n$.  
+1. Quelle sera la taille après $6$ heures ?  
+1. La taille dépasse 100 micromètres après combien d’heures ?  
+(Justifie par un encadrement ou un calcul.)
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"_":["test.md"],"static":"dist","theme":"white","transition":"fade"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
